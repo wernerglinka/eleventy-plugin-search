@@ -7,6 +7,7 @@ HTML-first Eleventy search plugin with Fuse.js and Cheerio. Processes final rend
 [![npm: version][npm-badge]][npm-url]
 [![license: MIT][license-badge]][license-url]
 [![coverage][coverage-badge]][coverage-url]
+[![Known Vulnerabilities](https://snyk.io/test/npm/eleventy-plugin-components-bundler/badge.svg)](https://snyk.io/test/npm/eleventy-plugin-search)
 [![AI-assisted development](https://img.shields.io/badge/AI-assisted-blue)](https://github.com/wernerglinka/eleventy-plugin-search/blob/main/CLAUDE.md)
 
 ## Features
