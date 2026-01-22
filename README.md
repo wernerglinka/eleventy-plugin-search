@@ -1,6 +1,13 @@
 # eleventy-plugin-search
 
+> **Early Development Notice:** This plugin is under active development. The API may change before reaching v1.0.0. Please report issues and feedback on [GitHub](https://github.com/wernerglinka/eleventy-plugin-search/issues).
+
 HTML-first Eleventy search plugin with Fuse.js and Cheerio. Processes final rendered HTML files after templates for accurate search indexing.
+
+[![npm: version][npm-badge]][npm-url]
+[![license: MIT][license-badge]][license-url]
+[![coverage][coverage-badge]][coverage-url]
+[![AI-assisted development](https://img.shields.io/badge/AI-assisted-blue)](https://github.com/wernerglinka/eleventy-plugin-search/blob/main/CLAUDE.md)
 
 ## Features
 
@@ -149,6 +156,17 @@ Enable debug output to see what the plugin is doing:
 DEBUG=Eleventy:search npx @11ty/eleventy
 ```
 
+## Code Quality
+
+- **ESLint**: Enforces code quality rules including `prefer-const`, `no-var`, strict equality, and complexity limits
+- **Prettier**: Ensures consistent code formatting (single quotes, no trailing commas, 100 char line width)
+
+Run `npm run prerelease` before committing to ensure your code passes all checks.
+
+## Test Coverage
+
+This plugin is tested using mocha with c8 for code coverage. Current coverage: 97%.
+
 ## Requirements
 
 - Node.js >= 20.0.0
@@ -157,3 +175,20 @@ DEBUG=Eleventy:search npx @11ty/eleventy
 ## License
 
 MIT
+
+## Development Transparency
+
+Portions of this project were developed with the assistance of AI tools including Claude and Claude Code. These tools were used to:
+
+- Generate or refactor code
+- Assist with documentation
+- Troubleshoot bugs and explore alternative approaches
+
+All AI-assisted code has been reviewed and tested to ensure it meets project standards. See the included [CLAUDE.md](CLAUDE.md) file for more details.
+
+[npm-badge]: https://img.shields.io/npm/v/eleventy-plugin-search.svg
+[npm-url]: https://www.npmjs.com/package/eleventy-plugin-search
+[license-badge]: https://img.shields.io/github/license/wernerglinka/eleventy-plugin-search
+[license-url]: LICENSE
+[coverage-badge]: https://img.shields.io/badge/test%20coverage-97%25-brightgreen
+[coverage-url]: #test-coverage
