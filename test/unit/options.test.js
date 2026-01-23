@@ -8,6 +8,7 @@ describe('options', () => {
       assert.deepStrictEqual(defaultOptions.ignore, ['**/search-index.json']);
       assert.strictEqual(defaultOptions.indexPath, 'search-index.json');
       assert.deepStrictEqual(defaultOptions.excludeSelectors, ['nav', 'header', 'footer']);
+      assert.strictEqual(defaultOptions.maxContentLength, 10000);
     });
 
     it('should have fuse options configured', () => {

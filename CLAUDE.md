@@ -2,6 +2,10 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Git Workflow Rules
+
+**IMPORTANT:** Never commit changes independently. Always ask for permission before running `git commit`. Present the proposed changes and commit message to the user first and wait for explicit approval.
+
 ## Project Overview
 
 This is an Eleventy plugin (`eleventy-plugin-search`) that generates a Fuse.js-compatible search index from rendered HTML files. It processes final HTML output after templates, using Cheerio for accurate content extraction.

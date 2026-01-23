@@ -52,6 +52,7 @@ The plugin runs after Eleventy builds your site and creates a `search-index.json
 | `ignore`           | `string \| string[]` | `['**/search-index.json']`    | Files to exclude from indexing            |
 | `indexPath`        | `string`             | `'search-index.json'`         | Output path for the search index          |
 | `excludeSelectors` | `string[]`           | `['nav', 'header', 'footer']` | CSS selectors to remove before extraction |
+| `maxContentLength` | `number`             | `10000`                       | Maximum characters of content to index    |
 | `fuseOptions`      | `object`             | See below                     | Fuse.js configuration                     |
 
 ### Default Fuse.js Options

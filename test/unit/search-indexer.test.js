@@ -3,6 +3,7 @@ import { createSearchIndex } from '../../lib/search-indexer.js';
 
 describe('search-indexer', () => {
   const defaultOptions = {
+    maxContentLength: 10000,
     fuseOptions: {
       keys: [{ name: 'title', weight: 10 }],
       threshold: 0.3
@@ -132,6 +133,41 @@ describe('search-indexer', () => {
 
       assert.strictEqual(result.entries[0].id, 'entry-0');
       assert.strictEqual(result.entries[1].id, 'entry-1');
+    });
+
+    it('should respect maxContentLength option', () => {
+      const longContent = 'a'.repeat(500);
+      const entries = [
+        {
+          id: 'page:/test',
+          type: 'page',
+          url: '/test',
+          title: 'Test',
+          content: longContent
+        }
+      ];
+
+      const shortOptions = { ...defaultOptions, maxContentLength: 100 };
+      const result = createSearchIndex(entries, shortOptions);
+
+      assert.strictEqual(result.entries[0].content.length, 100);
+    });
+
+    it('should use default maxContentLength of 10000', () => {
+      const longContent = 'a'.repeat(15000);
+      const entries = [
+        {
+          id: 'page:/test',
+          type: 'page',
+          url: '/test',
+          title: 'Test',
+          content: longContent
+        }
+      ];
+
+      const result = createSearchIndex(entries, defaultOptions);
+
+      assert.strictEqual(result.entries[0].content.length, 10000);
     });
   });
 });
