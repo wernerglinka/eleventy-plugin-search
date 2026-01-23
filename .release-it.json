@@ -3,7 +3,7 @@
     "release": true,
     "releaseName": "${name} v${version}",
     "draft": false,
-    "web": true,
+    "web": false,
     "tokenRef": "GH_TOKEN"
   },
   "git": {
