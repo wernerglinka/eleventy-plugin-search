@@ -1,6 +1,6 @@
 {
   "name": "eleventy-plugin-search",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTML-first Eleventy search plugin with Fuse.js and Cheerio",
   "type": "module",
   "main": "index.js",
